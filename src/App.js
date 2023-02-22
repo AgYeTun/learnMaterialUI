@@ -1,18 +1,14 @@
+import { Grid } from "@mui/material";
 import React from "react";
-import Button from "@mui/material/Button";
+import { Outlet } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <div>
-      <Button
-        variant="outlined"
-        color="warning"
-        size="large"
-        onClick={() => console.log("Clicked")}
-      >
-        Click Here
-      </Button>
-    </div>
+    <Grid container>
+      <Navbar />
+      <Outlet />
+    </Grid>
   );
 };
 
